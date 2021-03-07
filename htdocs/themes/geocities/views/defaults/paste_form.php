@@ -55,6 +55,7 @@
 
 			<div class="row">
 				<div class="span8">
+<?php if (!$this->config->item('disable_shorturl')) { // QDNX ?>
 					<div class="control-group">
 						<div class="controls">
 							<label class="checkbox">
@@ -70,6 +71,7 @@
 							</label>
 						</div>
 					</div>
+<?php } // QDNX ?>
 					<div class="control-group">
 						<div class="controls">
 							<label class="checkbox">

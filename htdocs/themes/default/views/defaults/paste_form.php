@@ -48,6 +48,7 @@
 		</div>
 
 		<div class="item_group">
+<?php if (!$this->config->item('disable_shorturl')) { // QDNX ?>
 			<div class="item">
 				<label for="snipurl"><?php echo lang('paste_create_shorturl'); ?>
 					<span class="instruction"><?php echo lang('paste_shorturl_desc'); ?></span>
@@ -63,6 +64,7 @@
 					?>
 				</div>
 			</div>
+<?php } // QDNX ?>
 
 			<div class="item">
 				<label for="private"><?php echo lang('paste_private'); ?>
