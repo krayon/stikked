@@ -60,6 +60,12 @@ $searchparams = ($this->input->get('search') ? '?search=' . $this->input->get('s
 						<div class="nav-collapse">
 							<ul class="nav">
 								<?php $l = $this->uri->segment(1)?>
+<?php // QDNX: { ?>
+<li><a
+    href="<?php echo base_url() . 'spamadmin'; ?>"
+    title="Admin"
+>Admin</a></li>
+<?php // QDNX: } ?>
 								<li><a <?php if($l == ""){ echo 'class="active"'; }?> href="<?php echo base_url(); ?>" title="<?php echo lang('menu_create_title'); ?>"><?php echo lang('menu_create'); ?></a></li>
 <?php if(!$this->config->item('private_only')){ ?>
 								<li><a <?php if($l == "lists" || $l == "view" and $this->uri->segment(2) != "options"){ echo 'class="active"'; }?> href="<?php echo site_url('lists') . $searchparams; ?>" title="<?php echo lang('menu_recent_title'); ?>"><?php echo lang('menu_recent'); ?></a></li>

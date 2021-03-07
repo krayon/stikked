@@ -50,6 +50,12 @@ $this->carabiner->display('css');
 					<h1><a href="<?php echo base_url(); ?>" class="title"><?php echo $this->config->item('site_name'); ?></a></h1>
 					<ul class="tabs">
 						<?php $l = $this->uri->segment(1)?>
+<?php // QDNX: { ?>
+<li><a
+    href="<?php echo base_url() . 'spamadmin'; ?>"
+    title="Admin"
+>Admin</a></li>
+<?php // QDNX: } ?>
 						<li><a <?php if($l == ""){ echo 'class="active"'; }?> href="<?php echo base_url()?>" title="<?php echo lang('menu_create_title'); ?>"><?php echo lang('menu_create'); ?></a></li>
 <?php if(! $this->config->item('private_only')){ ?>
 						<li><a <?php if($l == "lists"){ echo 'class="active"'; }?> href="<?php echo site_url('lists'); ?>" title="<?php echo lang('menu_recent_title'); ?>"><?php echo lang('menu_recent'); ?></a></li>
